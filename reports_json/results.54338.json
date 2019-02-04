@@ -1,0 +1,159 @@
+[
+  {
+    "description": "  - Find a flight\n  - Add flight to basket\n  - Add Booker's Details\n  - Add passenger details\n  - Validate the Basket",
+    "keyword": "Feature",
+    "name": "easyJet",
+    "line": 2,
+    "id": "easyjet",
+    "tags": [
+      {
+        "name": "@flight",
+        "line": 1
+      }
+    ],
+    "uri": "test/features/find_a_flight.feature",
+    "elements": [
+      {
+        "id": "easyjet;find-a-flight",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Find a Flight",
+        "tags": [
+          {
+            "name": "@flight",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test/support/hooks.js:96"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "easyjet;add-flight-details",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Add flight details",
+        "tags": [
+          {
+            "name": "@flight",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test/support/hooks.js:96"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "easyjet;add-booker's-details",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Add Booker's details",
+        "tags": [
+          {
+            "name": "@flight",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test/support/hooks.js:96"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "easyjet;add-passenger-details",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Add passenger details",
+        "tags": [
+          {
+            "name": "@flight",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test/support/hooks.js:96"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
