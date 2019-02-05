@@ -7,7 +7,7 @@ chai.use(chaiAsPromised);
 const config = {
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
-    specs: ["../features/*.feature"],
+    specs: ['../features/**/*.feature'],
     baseUrl: "https://www.easyjet.com/",
 
 
@@ -18,7 +18,7 @@ const config = {
     allScriptsTimeout: 500000,
 
     onPrepare() {
-        browser.waitForAngularEnabled(false);
+        browser.waitForAngularEnabled(true);
         global.expect = chai.expect;
         global.assert = chai.assert;
         global.should = chai.should;
@@ -32,7 +32,7 @@ const config = {
         tags: ['@flight'],
         require: [
             '../support/*.js',
-            '../step_definitions/signIn.steps.js'
+            '../features/step_definitions/**/*.steps.js'
         ]
     },
 

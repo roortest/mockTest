@@ -532,7 +532,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
         <tr>
             <td class="chart">
                 <canvas id="feature-chart"></canvas>
-                <div class="total">1</div>
+                <div class="total">2</div>
             </td>
             <td>
                 <table class="tile_info">
@@ -556,6 +556,17 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     </tr>
                     
                     
+                    <tr>
+                        <td>
+                            <p data-toggle="tooltip" data-placement="left"
+                               title="Features with undefined step definitions.">
+                                <i class="fa fa-question-circle not-defined-color"></i>
+                                Not Defined
+                            </p>
+                        </td>
+                        <td class="percentage">50.00 %</td>
+                    </tr>
+                    
                     
                     
                     <tr>
@@ -566,7 +577,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 Skipped
                             </p>
                         </td>
-                        <td class="percentage">100.00 %</td>
+                        <td class="percentage">50.00 %</td>
                     </tr>
                     
 
@@ -610,7 +621,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
         <tr>
             <td class="chart">
                 <canvas id="scenario-chart"></canvas>
-                <div class="total">0</div>
+                <div class="total">1</div>
             </td>
             <td>
                 <table class="tile_info">
@@ -621,7 +632,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 Passed
                             </p>
                         </td>
-                        <td class="percentage">NaN %</td>
+                        <td class="percentage">0.00 %</td>
                     </tr>
                     <tr>
                         <td>
@@ -630,8 +641,18 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 Failed
                             </p>
                         </td>
-                        <td class="percentage">NaN %</td>
+                        <td class="percentage">0.00 %</td>
                     
+                    
+                    <tr>
+                        <td>
+                            <p data-toggle="tooltip" data-placement="left" title="Scenario has no step implmentation.">
+                                <i class="fa fa-question-circle not-defined-color"></i>
+                                Not defined
+                            </p>
+                        </td>
+                        <td class="percentage">100.00 %</td>
+                    </tr>
                     
                     </tr>
                     
@@ -690,6 +711,8 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                         
                         
                         
+                        <th>Undefined</th>
+                        
                         
                     </tr>
                     </thead>
@@ -698,7 +721,85 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     
                     <tr>
                         <td>
-                            <a href="features/71f5a310-214a-411b-84b3-4bb11f959fb8-easyjet.html">easyJet</a>
+                            <a href="features/79fef354-1dfb-44f2-9f29-2876370bf109-easyjet.html">easyJet</a>
+                        </td>
+                        <td class="text-center">
+                            
+                            
+                            
+                            
+                            <i class="fa fa-tag fa-lg" data-toggle="tooltip" data-placement="top"
+                               title="@flight">
+                                <span>@flight</span>
+                            </i>
+                            
+                            
+                        </td>
+                        <td class="text-center">
+                            
+                            
+                            
+                            
+                            
+                            
+                            <i class="fa fa-question-circle not-defined-color fa-lg" data-toggle="tooltip" data-placement="top" title="Not Defined">
+                                <span>question-circle not-defined-color</span>
+                            </i>
+                        </td>
+                        <td class="text-center">
+                            
+                            
+                            
+                            
+                            
+                            
+                            <i class="fa fa-question-circle not-defined-color fa-lg" data-toggle="tooltip" data-placement="top" title="Not known">
+                                <span>question-circle not-defined-color</span>
+                            </i>
+                        </td>
+                        <td>
+                            
+                            
+                            
+                            
+                            <i class="fa fa-question-circle not-defined-color fa-lg"></i> not known
+                        </td>
+                        <td>
+                            
+                            
+                            
+                            
+                            <i class="fa fa-question-circle not-defined-color fa-lg"><span>question-circle not-defined-color</span></i>
+                            
+                        </td>
+                        
+                        
+                        <td>
+                            
+                            
+                            
+                            
+                            
+                            <i class="fa fa-chrome fa-lg"><span>chrome</span></i>
+                            72.0.3626.81
+                            
+                        </td>
+                        
+                        
+                        <td class="text-right ">1</td>
+                        <td class="text-right none">0</td>
+                        <td class="text-right none">0</td>
+                        
+                        
+                        
+                        <td class="text-right ">1</td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <a href="features/81d0f9ef-77f3-4e78-be0d-4d9ececb08c0-find-a-flight-for-easyjet.html">Find a flight for easyJet</a>
                         </td>
                         <td class="text-center">
                             
@@ -769,6 +870,8 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                         
                         
                         
+                        <td class="text-right none">0</td>
+                        
                         
                     </tr>
                     
@@ -834,7 +937,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 0,
                                 0,
                                 0,
-                                0,
+                                1,
                                 0,
                                 1
                             ],
@@ -873,7 +976,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 0,
                                 0,
                                 0,
-                                0,
+                                1,
                                 0,
                                 0
                             ],
