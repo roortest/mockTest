@@ -1,16 +1,15 @@
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
-
-
+const minimist = require('minimist');
 chai.use(chaiAsPromised);
 
-const config = {
+
+    const config = {
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     specs: ['../features/**/*.feature'],
-    baseUrl: "https://www.easyjet.com/",
 
-
+    baseUrl: process.env.TEST_URL ||"https://www.easyjet.com/",
 
     directConnect: true,
     // seleniumAddress: 'http://localhost:4444/wd/hub',
@@ -18,12 +17,11 @@ const config = {
     allScriptsTimeout: 500000,
 
     onPrepare() {
-        browser.waitForAngularEnabled(true);
+        browser.waitForAngularEnabled(false);
         global.expect = chai.expect;
         global.assert = chai.assert;
         global.should = chai.should;
     },
-
 
 
     cucumberOpts: {

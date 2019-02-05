@@ -10,11 +10,11 @@ const EC = protractor.ExpectedConditions;
 defineSupportCode(function ({Given, When, Then}) {
 
 
-    Given(/^I navigate to easyJet Url$/, async function () {
+    Given(/^I navigate to easyJet Url$/,{retry: 15}, async function () {
+        browser.sleep(LONG_DELAY);
         await browser.get(config.config.baseUrl);
-        browser.sleep(MID_DELAY);
-        await browser.driver.manage()
-            .deleteAllCookies();
+        browser.sleep(LONG_DELAY);
+        await browser.driver.manage().deleteAllCookies();
         await browser.refresh();
         browser.sleep(MID_DELAY);
     });
