@@ -57,6 +57,7 @@ defineSupportCode(function ({Given, When, Then}) {
 
     Then(/^I click on show flights$/, {timeout: 60 * 1000}, async function () {
         await calendarPage.show_flights_btn.isDisplayed();
+        browser.sleep(SHORT_DELAY);
         await calendarPage.show_flights_btn.first().click();
         browser.sleep(MID_DELAY);
 
@@ -113,12 +114,12 @@ defineSupportCode(function ({Given, When, Then}) {
     });
 
 
-    Then(/^I proceed to checkout page$/,{timeout: 60 * 1000}, async function () {
+    Then(/^I proceed to checkout page$/, {timeout: 60 * 1000}, async function () {
         browser.sleep(SHORT_DELAY);
-       await checkoutPage.sigin_or_create_account.isDisplayed();
-       await expect(checkoutPage.sigin_or_create_account.getText()).to.eventually.equal("Sign in or Create account");
+        await checkoutPage.sigin_or_create_account.isDisplayed();
+        await expect(checkoutPage.sigin_or_create_account.getText()).to.eventually.equal("Sign in or Create account");
         browser.sleep(SHORT_DELAY);
-       await checkoutPage.new_customet_btn.click();
+        await checkoutPage.new_customet_btn.click();
         browser.sleep(SHORT_DELAY);
         await checkoutPage.signup_email.click();
         await checkoutPage.signup_email.sendKeys('roortest@gmail.com');
@@ -129,23 +130,23 @@ defineSupportCode(function ({Given, When, Then}) {
     });
 
 
-
-    Given(/^I add booker's details$/, {timeout: 60 * 1000},async  function () {
-
-
-
-    });
-
-
-    Then(/^I add passenger details$/, function () {
+    Given(/^I add booker's details$/, {timeout: 60 * 1000}, async function () {
+        await checkoutPage.bookers_details();
+        browser.sleep(SHORT_DELAY);
 
     });
 
 
-    Then(/^I validate added basket details$/, function () {
+    Then(/^I add passenger details$/, {timeout: 60 * 1000}, async function () {
+        await checkoutPage.passenger_details();
+        browser.sleep(SHORT_DELAY);
 
     });
+    
 
+    Then(/^I validate added basket details$/, {timeout: 60 * 1000}, async function () {
+
+    });
 
 
 });

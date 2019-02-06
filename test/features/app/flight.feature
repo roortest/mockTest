@@ -15,14 +15,14 @@ Feature: Find a flight for easyJet
     And I click Continue
     When I skip optional fields
 
-    Scenario: checkout
-      Then I proceed to checkout page
+  Scenario: checkout
+    Then I proceed to checkout page
 
   Scenario: booker details
     And I add booker's details
 
   Scenario: Passenger details
-    Then I add passenger details
+    And I add passenger details
 
   Scenario: verify basket details
     Then I validate added basket details
