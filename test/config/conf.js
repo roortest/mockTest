@@ -1,18 +1,17 @@
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
-
-
 chai.use(chaiAsPromised);
 
 
 
 const config = {
+    directConnect: true,
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     specs: ['../features/**/*.feature'],
     baseUrl:'https://www.easyjet.com/en/',
 
-    directConnect: true,
+
     // seleniumAddress: 'http://localhost:4444/wd/hub',
     getPageTimeout: 120000,
     allScriptsTimeout: 500000,
