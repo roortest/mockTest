@@ -1,32 +1,44 @@
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
-const minimist = require('minimist');
+
+
 chai.use(chaiAsPromised);
 
 
-    const config = {
+
+const config = {
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     specs: ['../features/**/*.feature'],
-
-    baseUrl: process.env.TEST_URL ||"https://www.easyjet.com/",
+    baseUrl:'https://www.easyjet.com/en/',
 
     directConnect: true,
     // seleniumAddress: 'http://localhost:4444/wd/hub',
     getPageTimeout: 120000,
     allScriptsTimeout: 500000,
 
+
     onPrepare() {
-        browser.waitForAngularEnabled(false);
+        browser.manage().window().maximize();
+
+        browser.waitForAngularEnabled(true).then(function () {
+                return browser.driver.get(config.baseUrl);
+        }).then(function () {
+            return true;
+        });
+
+
+
         global.expect = chai.expect;
         global.assert = chai.assert;
         global.should = chai.should;
     },
 
 
+
     cucumberOpts: {
         strict: true,
-        format: ['node_modules/cucumber-pretty', 'json:reports_json/results.json'],
+        format: ['node_modules/cucumber-pretty','json:reports_json/results.json'],
         tags: ['@flight'],
         require: [
             '../support/*.js',
@@ -40,10 +52,10 @@ chai.use(chaiAsPromised);
             options: {
                 automaticallyGenerateReport: true,
                 removeExistingJsonReportFile: true,
-                reportName: 'easyJet',
+                reportName: 'easyjet',
                 // openReportInBrowser: true,
-                jsonDir: 'reports/test-functional/functional',
-                reportPath: 'reports/test-functional/functional'
+                jsonDir: 'reports/tests/functional',
+                reportPath: 'reports/tests/functional'
             }
         }
     ]

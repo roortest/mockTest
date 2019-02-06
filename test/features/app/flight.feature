@@ -2,8 +2,7 @@
 Feature: Find a flight for easyJet
 
   Background:
-    Given I navigate to easyJet Url
-    And wait for
-    And I SignIn
+#    When I SignIn
 
-    Scenario: Add flight destinations
+  Scenario: Add flight destinations
+    When I find a flight from Luton to Alicante
