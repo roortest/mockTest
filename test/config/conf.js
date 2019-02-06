@@ -14,7 +14,6 @@ const config = {
     Password:'Lakshay75',
 
 
-    // seleniumAddress: 'http://localhost:4444/wd/hub',
     getPageTimeout: 120000,
     allScriptsTimeout: 500000,
 

@@ -9,6 +9,11 @@ function calendarPage() {
     this.close_button = element(by.css('button#close-drawer-link'));
     this.select_return_field = element(by.css('.return-date-picker'));
     this.select_depart_field = element(by.css('.outbound-date-picker'));
+    this.from_field = element(by.css('.ej-input.origin.ui-autocomplete-input'));
+    this.to_field = element(by.css('.ej-input.destination.ui-autocomplete-input'));
+    this.from_option = element(by.css('ul#ui-id-1 > li >a'));
+    this.to_option = element(by.css('ul#ui-id-2 > li >a'));
+
 
 }
     module.exports = new calendarPage();

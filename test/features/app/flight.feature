@@ -7,15 +7,22 @@ Feature: Find a flight for easyJet
   Scenario: Add flight destinations details
     When I find a flight from Luton to Alicante
     Then I add departing and return details
+    And I click on show flights
 
-    Scenario: Add flight details to basket
-      And I add flight details to basket
+  Scenario: Add flight details to basket
+    And I add flight details to basket
+    Then I verified added details to basket
+    And I click Continue
+    When I skip optional fields
 
-      Scenario: booker details
-        And I add booker's details
+    Scenario: checkout
+      Then I proceed to checkout page
 
-        Scenario: Passenger details
-          Then I add passenger details
+  Scenario: booker details
+    And I add booker's details
 
-          Scenario: verify basket details
-            Then I validate added basket details
+  Scenario: Passenger details
+    Then I add passenger details
+
+  Scenario: verify basket details
+    Then I validate added basket details
