@@ -19,20 +19,7 @@ defineSupportCode(function ({Given, When, Then}) {
 
 
     When(/^I SignIn$/, {timeout: 60 * 1000}, async function () {
-        await browser.driver.findElement(by.css('span.sign-in')).click();
-        browser.sleep(SHORT_DELAY);
-
-        await signInPage.emailAddress.sendKeys('rchittathuru@gmail.com');
-        browser.sleep(SHORT_DELAY);
-
-
-        await signInPage.password.sendKeys('Lakshay75');
-        browser.sleep(SHORT_DELAY);
-
-        await signInPage.login.click();
-        browser.sleep(SHORT_DELAY);
-
-
+        await signInPage.signIn();
     });
 
 
@@ -56,20 +43,20 @@ defineSupportCode(function ({Given, When, Then}) {
 
     Then(/^I add departing and return details$/, {timeout: 60 * 1000}, async function () {
         browser.sleep(SHORT_DELAY);
-        await browser.driver.findElement(by.css('.outbound-date-picker')).click();
+        await calendarPage.select_depart_field.click();
         browser.sleep(SHORT_DELAY);
         await calendarPage.departing_calendar.first().click();
         browser.sleep(SHORT_DELAY);
-        await browser.driver.findElement(by.css('button#close-drawer-link')).click();
+        await calendarPage.close_button.click();
         browser.sleep(SHORT_DELAY);
-        await browser.driver.findElement(by.css('.return-date-picker')).click();
+        await calendarPage.select_return_field.click();
         browser.sleep(SHORT_DELAY);
         await expect(calendarPage.returning_text.isDisplayed());
         await browser.sleep(MID_DELAY);
-        browser.actions().mouseMove(calendarPage.return_calendar.first()).perform();
+       await expect(calendarPage.return_calendar.first().isDisplayed());
         await calendarPage.return_calendar.first().click();
         browser.sleep(MID_DELAY);
-        await calendarPage.search_flights_btn.first().click();
+        await calendarPage.show_flights_btn.first().click();
         browser.sleep(MID_DELAY);
 
     });
@@ -91,6 +78,8 @@ defineSupportCode(function ({Given, When, Then}) {
 
 
     Given(/^I add flight details to basket$/, function () {
+        await
+
 
     });
 

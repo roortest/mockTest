@@ -46,8 +46,6 @@
     "cucumber-html-reporter": "^0.4.2",
     "cucumberjs-allure-reporter": "^1.0.3",
     "express": "^4.16.2",
-    "govuk-elements-sass": "^3.1.2",
-    "govuk_template_jinja": "^0.23.0",
     "mkdirp": "^0.5.1",
     "node.js": "^0.0.0",
     "rxjs": "^5.5.6",

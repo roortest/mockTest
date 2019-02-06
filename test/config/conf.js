@@ -10,6 +10,8 @@ const config = {
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     specs: ['../features/**/*.feature'],
     baseUrl:'https://www.easyjet.com/en/',
+    Email: 'rchittathuru@gmail.com',
+    Password:'Lakshay75',
 
 
     // seleniumAddress: 'http://localhost:4444/wd/hub',
