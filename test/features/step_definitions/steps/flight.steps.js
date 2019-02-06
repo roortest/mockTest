@@ -76,14 +76,6 @@ defineSupportCode(function ({Given, When, Then}) {
 
     });
 
-    Then(/^I verified added details to basket$/, {timeout: 60 * 1000}, async function () {
-        await basketPage.basket_header.isDisplayed();
-
-        await expect(basketPage.basket_flight_list.isDisplayed());
-        await expect(basketPage.basket_outbound_flight.isDisplayed());
-        await expect(basketPage.basket_return_flight.isDisplayed());
-
-    });
 
 
     Then(/^I click Continue$/, {timeout: 60 * 1000}, async function () {
@@ -147,6 +139,10 @@ defineSupportCode(function ({Given, When, Then}) {
 
 
     Then(/^I validate added basket details$/, {timeout: 60 * 1000}, async function () {
+        await basketPage.basket_header.isDisplayed();
+        await expect(basketPage.basket_flight_list.isDisplayed());
+        await expect(basketPage.basket_outbound_flight.isDisplayed());
+        await expect(basketPage.basket_return_flight.isDisplayed());
 
     });
 

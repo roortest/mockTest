@@ -8,7 +8,7 @@ function basketPage() {
     this.continue = element.all(by.css('.button-container'));
     this.skip_optional_btn = element(by.css('.button-container'));
     this.accept_and_continue = element(by.css("div.multi-options > div:nth-child(1) > input"));
-    this.no_thanks_btn = element.all(by.css('div.link-container > button'));
+    this.no_thanks_btn = element.all(by.css('.link-container > button.button-link'));
 
 
 
