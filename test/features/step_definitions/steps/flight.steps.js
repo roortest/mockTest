@@ -131,6 +131,7 @@ defineSupportCode(function ({Given, When, Then}) {
 
 
     Given(/^I add booker's details$/, {timeout: 60 * 1000}, async function () {
+        browser.sleep(SHORT_DELAY);
         await checkoutPage.bookers_details();
         browser.sleep(SHORT_DELAY);
 
@@ -138,11 +139,12 @@ defineSupportCode(function ({Given, When, Then}) {
 
 
     Then(/^I add passenger details$/, {timeout: 60 * 1000}, async function () {
+        browser.sleep(SHORT_DELAY);
         await checkoutPage.passenger_details();
         browser.sleep(SHORT_DELAY);
 
     });
-    
+
 
     Then(/^I validate added basket details$/, {timeout: 60 * 1000}, async function () {
 

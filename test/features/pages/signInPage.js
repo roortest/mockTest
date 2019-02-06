@@ -10,8 +10,6 @@ function signInPage() {
     this.login = element(by.css('#signin-login'));
 
 
-
-
     this.sign_In = async function () {
         await this.enterUrEmail();
         await this.enterPassword();
