@@ -74,20 +74,10 @@ defineSupportCode(function ({Given, When, Then}) {
         await pickFlightPage.lowest_fare_flights.first().click();
         await pickFlightPage.lowest_fare_flights.last().click();
 
-    });
-
-
-
-    Then(/^I click Continue$/, {timeout: 60 * 1000}, async function () {
         await basketPage.continue.isDisplayed();
         await basketPage.continue.first().click();
         browser.sleep(SHORT_DELAY);
 
-
-    });
-
-
-    Then(/^I skip optional fields$/, {timeout: 60 * 1000}, async function () {
 
         await basketPage.skip_optional_btn.isDisplayed();
         await basketPage.skip_optional_btn.click();
@@ -145,8 +135,6 @@ defineSupportCode(function ({Given, When, Then}) {
         await expect(basketPage.basket_return_flight.isDisplayed());
 
     });
-
-
 
 
 

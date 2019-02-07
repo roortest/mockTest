@@ -71,7 +71,7 @@ function checkoutPage() {
 
         browser.executeScript('window.scrollTo(0,10000);').then(function(){
 
-            console.log('++++++SCROLLED UP+++++');
+            console.log('++++++SCROLLED Down+++++');
         });
         await this.continue_btn.first().click();
         browser.sleep(MID_DELAY);
