@@ -25,3 +25,5 @@ Feature: Find a flight for easyJet
 
   Scenario: verify basket details
     Then I validate added basket details
+
+
